@@ -1,0 +1,25 @@
+{
+  "company": "47da33dd-b1f0-46b8-935d-50919141e732",
+  "project": "ALIVE O.S.",
+  "role": "backend",
+  "product_slug": "goqii-alive-os",
+  "spec": {
+    "persona": {
+      "business_domain": "healthtech",
+      "target_audience": "both",
+      "product_mechanics": "Ingests continuous biometric and activity telemetry from wearables, diagnostic lab results, and daily check-ins to run predictive risk scoring and aging assessments via an analytics engine (ALIVE O.S.). Dispatches personalized recommendations, meal recognition analyses, and micro-actions to users and dedicated human coaches through a mobile application.",
+      "products": ["ALIVE O.S.", "GOQii Mobile App", "SuperLife", "HealthEngage", "Project Sanjeevini", "Health Locker"],
+      "customers": "Consumers/individuals, corporate employers, health insurers, clinical providers, pharma companies, and public health systems.",
+      "scale_signals": ["5M+ registered users/lives impacted", "300+ enterprise partners", "10+ years of longitudinal biometric and behavior telemetry"]
+    },
+    "project_context": "ALIVE O.S. — the health-telemetry risk-scoring engine: ingest biometric/activity telemetry, compute auditable risk scores and aging assessments, dispatch recommendations and coach alerts.",
+    "plan": {
+      "domain": "healthtech",
+      "language": "python",
+      "framework": "fastapi",
+      "invariant": "a member's risk score reflects the newest event-time reading and never regresses when a late, older-event-time sample arrives; alert dispatch is at-most-once per recipient on a stable event id",
+      "summary": "ALIVE O.S. health-telemetry risk-scoring engine — layered core/store/services/worker/api, deterministic and in-memory, with debug (as-of regression), feature (idempotent dispatch), and design (scale) tasks."
+    },
+    "requirements": ["python", "fastapi", "health", "healthtech", "telemetry", "wearables", "time-series", "event-time", "watermark", "idempotency", "deduplication", "scoring", "backend"]
+  }
+}

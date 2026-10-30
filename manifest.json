@@ -1,0 +1,13 @@
+{
+  "tags": ["python", "fastapi", "api", "rest", "http", "asgi", "backend", "service", "microservice", "json", "health", "healthtech", "wearables", "telemetry", "biometrics", "time-series", "event-time", "streaming", "watermark", "scoring", "risk-scoring", "aging", "idempotency", "deduplication", "windowing", "concurrency", "out-of-order", "determinism", "worker", "outbox", "coaching"],
+  "company": "Goqii Technology",
+  "project": "ALIVE O.S.",
+  "roles": {
+    "backend": {
+      "subsystems": ["alive/services/scoring.py", "alive/services/ingest.py", "alive/services/alerting.py", "alive/core/score.py", "alive/store/score_store.py", "alive/store/dispatch_log.py", "alive/worker/processor.py", "alive/api/routes.py"],
+      "competencies": ["event-time vs processing-time reasoning (late-arriving samples)", "as-of monotonicity: a newer score is never regressed by a late stale computation", "idempotent at-most-once dispatch keyed on a stable event id", "half-open tumbling-window attribution (exactly one window, no double-count)", "deterministic scoring reproducible from input events in any order", "per-device monotonic sequence + unit normalization at the edge", "layered architecture (core -> store -> services -> worker -> api)", "REST/ASGI endpoint design with FastAPI", "deterministic testing with an injected clock"],
+      "modes": ["implementation", "debugging", "testing", "design"],
+      "cannot_assess": ["a real time-series database or durable persistence (the stores are in-memory)", "true multi-process / distributed stream processing and real watermark propagation across partitions (single-process; out-of-order is modelled by event_time, not by real parallel ingestion)", "a real message broker or at-least-once delivery over a network (the outbox and retries are in-process) — distributed delivery is the design task's subject", "authentication, authorization, consent and PHI encryption (not in this build)", "real ML risk models (the score is a transparent, auditable rule engine, by design)"]
+    }
+  }
+}

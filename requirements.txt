@@ -1,0 +1,6 @@
+# The HTTP edge uses FastAPI; the core engine (where every task lives) is pure
+# stdlib and needs none of this, so `python3 -m unittest` grades the logic even
+# if these aren't installed (the API tests skip themselves when FastAPI is absent).
+fastapi>=0.110
+uvicorn>=0.27
+httpx>=0.27
